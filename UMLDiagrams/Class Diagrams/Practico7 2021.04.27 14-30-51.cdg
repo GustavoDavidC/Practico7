@@ -32,7 +32,7 @@
         <Method name="getLegajo" returnType="int" visibility="public"/>
         <Method name="getApellido" returnType="String" visibility="public"/>
         <Method name="getNombre" returnType="String" visibility="public"/>
-        <Method name="agregarMateria" returnType="Materia" visibility="public">
+        <Method name="agregarMateria" returnType="void" visibility="public">
           <Argument type="Materia" name="m"/>
         </Method>
         <Method name="cantidadMaterias" returnType="int" visibility="public"/>
@@ -82,11 +82,11 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
+    <UseRelation name="" source="ViewMenu" target="ViewAltaAlumnos" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Materias" source="Alumno" target="Materia" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <UseRelation name="" source="ViewMenu" target="ViewFormularioInscripcion" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation name="" source="test.Colegio" target="Alumno" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="alumno" source="ViewMenu" target="Alumno" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
-    <HasRelation name="Materias" source="Alumno" target="Materia" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
-    <UseRelation name="" source="ViewMenu" target="ViewAltaAlumnos" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation name="" source="ViewMenu" target="ViewAltaMaterias" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="" source="ViewMenu" target="ViewFormularioInscripcion" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
